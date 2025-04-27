@@ -1,6 +1,5 @@
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+# For Any doubt contact @HeartThief [REPO OWNER]
+# Paid Repo and bots available @HeartxBotz
 
 import re
 from pymongo import MongoClient
@@ -11,19 +10,19 @@ from pyrogram.errors.exceptions.bad_request_400 import AccessTokenExpired, Acces
 from config import API_ID, API_HASH, DB_URI, DB_NAME, CLONE_MODE
 
 mongo_client = MongoClient(DB_URI)
-mongo_db = mongo_client["cloned_vjbotz"]
+mongo_db = mongo_client["cloned_HeartxBotz"]
 
 @Client.on_message(filters.command("clone") & filters.private)
 async def clone(client, message):
     if CLONE_MODE == False:
         return 
-    techvj = await client.ask(message.chat.id, "<b>1) sᴇɴᴅ <code>/newbot</code> ᴛᴏ @BotFather\n2) ɢɪᴠᴇ ᴀ ɴᴀᴍᴇ ꜰᴏʀ ʏᴏᴜʀ ʙᴏᴛ.\n3) ɢɪᴠᴇ ᴀ ᴜɴɪǫᴜᴇ ᴜsᴇʀɴᴀᴍᴇ.\n4) ᴛʜᴇɴ ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ ᴀ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ ʏᴏᴜʀ ʙᴏᴛ ᴛᴏᴋᴇɴ.\n5) ꜰᴏʀᴡᴀʀᴅ ᴛʜᴀᴛ ᴍᴇssᴀɢᴇ ᴛᴏ ᴍᴇ.\n\n/cancel - ᴄᴀɴᴄᴇʟ ᴛʜɪs ᴘʀᴏᴄᴇss.</b>")
-    if techvj.text == '/cancel':
-        await techvj.delete()
+    reply_msg = await client.ask(message.chat.id, "<b>1) sᴇɴᴅ <code>/newbot</code> ᴛᴏ @BotFather\n2) ɢɪᴠᴇ ᴀ ɴᴀᴍᴇ ꜰᴏʀ ʏᴏᴜʀ ʙᴏᴛ.\n3) ɢɪᴠᴇ ᴀ ᴜɴɪǫᴜᴇ ᴜsᴇʀɴᴀᴍᴇ.\n4) ᴛʜᴇɴ ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ ᴀ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ ʏᴏᴜʀ ʙᴏᴛ ᴛᴏᴋᴇɴ.\n5) ꜰᴏʀᴡᴀʀᴅ ᴛʜᴀᴛ ᴍᴇssᴀɢᴇ ᴛᴏ ᴍᴇ.\n\n/cancel - ᴄᴀɴᴄᴇʟ ᴛʜɪs ᴘʀᴏᴄᴇss.</b>")
+    if reply_msg.text == '/cancel':
+        await reply_msg.delete()
         return await message.reply('<b>ᴄᴀɴᴄᴇʟᴇᴅ ᴛʜɪs ᴘʀᴏᴄᴇss 🚫</b>')
-    if techvj.forward_from and techvj.forward_from.id == 93372553:
+    if reply_msg.forward_from and reply_msg.forward_from.id == 93372553:
         try:
-            bot_token = re.findall(r"\b(\d+:[A-Za-z0-9_-]+)\b", techvj.text)[0]
+            bot_token = re.findall(r"\b(\d+:[A-Za-z0-9_-]+)\b", reply_msg.text)[0]
         except:
             return await message.reply('<b>sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ 😕</b>')
     else:
@@ -31,13 +30,13 @@ async def clone(client, message):
     user_id = message.from_user.id
     msg = await message.reply_text("**👨‍💻 ᴡᴀɪᴛ ᴀ ᴍɪɴᴜᴛᴇ ɪ ᴀᴍ ᴄʀᴇᴀᴛɪɴɢ ʏᴏᴜʀ ʙᴏᴛ ❣️**")
     try:
-        vj = Client(
+        new_bot = Client(
             f"{bot_token}", API_ID, API_HASH,
             bot_token=bot_token,
             plugins={"root": "clone_plugins"}
         )
-        await vj.start()
-        bot = await vj.get_me()
+        await new_bot.start()
+        bot = await new_bot.get_me()
         details = {
             'bot_id': bot.id,
             'is_bot': True,
@@ -69,9 +68,8 @@ async def delete_cloned_bot(client, message):
     except:
         await message.reply_text("An error occurred while deleting the cloned bot.")
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+# For Any doubt contact @HeartThief [REPO OWNER]
+# Paid Repo and bots available @HeartxBotz
 
 async def restart_bots():
     bots = list(mongo_db.bots.find())
