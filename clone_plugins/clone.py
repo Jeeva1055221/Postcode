@@ -10,7 +10,7 @@ from pyrogram.errors.exceptions.bad_request_400 import AccessTokenExpired, Acces
 from config import API_ID, API_HASH, DB_URI, DB_NAME, CLONE_MODE
 
 mongo_client = MongoClient(DB_URI)
-mongo_db = mongo_client["cloned_vjbotz"]
+mongo_db = mongo_client["cloned_HeartxBotz"]
 
 @Client.on_message(filters.command("clone") & filters.private)
 async def clone(client, message):
