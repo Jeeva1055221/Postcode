@@ -1,9 +1,9 @@
 import jinja2
 from config import LOG_CHANNEL, URL
-from CloudXbotz.bot import StreamBot
-from CloudXbotz.utils.human_readable import humanbytes
-from CloudXbotz.utils.file_properties import get_file_ids
-from CloudXbotz.server.exceptions import InvalidHash
+from HeartxBotz.bot import StreamBot
+from HeartxBotz.utils.human_readable import humanbytes
+from HeartxBotz.utils.file_properties import get_file_ids
+from HeartxBotz.server.exceptions import InvalidHash
 import urllib.parse
 import logging
 import aiohttp
@@ -25,9 +25,9 @@ async def render_page(id, secure_hash, src=None):
     tag = file_data.mime_type.split("/")[0].strip()
     file_size = humanbytes(file_data.file_size)
     if tag in ["video", "audio"]:
-        template_file = "CloudXbotz/template/req.html"
+        template_file = "HeartxBotz/template/req.html"
     else:
-        template_file = "CloudXbotz/template/dl.html"
+        template_file = "HeartxBotz/template/dl.html"
         async with aiohttp.ClientSession() as s:
             async with s.get(src) as u:
                 file_size = humanbytes(int(u.headers.get("Content-Length")))
