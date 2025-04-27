@@ -22,20 +22,14 @@ Cᴜʀʀᴇɴᴛ Sʜᴏʀᴛᴇɴᴇʀ API:</b> `{shortener_api}`
 
 If You Want To Remove Api Then Copy This And Send To Bot - `/api None`"""
 
-    ABOUT_TXT = """<b>ʜɪ ɪ ᴀᴍ ᴘᴇʀᴍᴀɴᴇɴᴛ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ ᴡɪᴛʜ ᴄʟᴏɴᴇ ғᴇᴀᴛᴜʀᴇ + ᴄᴜsᴛᴏᴍ ᴜʀʟ sʜᴏʀᴛɴᴇʀ ɪᴛ ᴍᴇᴀɴs ᴀɴʏ ᴜsᴇʀ ᴄᴀɴ sᴇᴛ ʜɪs ᴜʀʟ sʜᴏʀᴛɴᴇʀ ᴀɴᴅ + ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ.
+    ABOUT_TXT = """<blockquote><b>ʜɪ ɪ ᴀᴍ ᴘᴇʀᴍᴀɴᴇɴᴛ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ ᴡɪᴛʜ ᴄʟᴏɴᴇ ғᴇᴀᴛᴜʀᴇ + ᴄᴜsᴛᴏᴍ ᴜʀʟ sʜᴏʀᴛɴᴇʀ ɪᴛ ᴍᴇᴀɴs ᴀɴʏ ᴜsᴇʀ ᴄᴀɴ sᴇᴛ ʜɪs ᴜʀʟ sʜᴏʀᴛɴᴇʀ ᴀɴᴅ + ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ.
 
-🤖 ᴍʏ ɴᴀᴍᴇ: {}
-
-🧑🏻‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ: <a href=https://t.me/CloudxAdmin_Bot>𝐂𝐥𝐨𝐮𝐝𝐱𝐀𝐝𝐦𝐢𝐧_𝐁𝐨𝐭</a>
-
-📢 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ: <a href=https://t.me/CloudXbotz>𝐂𝐥𝐨𝐮𝐝𝐗𝐛𝐨𝐭𝐳</a></b>
-
-📝 ʟᴀɴɢᴜᴀɢᴇ: <a href=https://www.python.org>𝐏𝐲𝐭𝐡𝐨𝐧𝟑</a>
-
-📚 ʟɪʙʀᴀʀʏ: <a href=https://docs.pyrogram.org>𝐏𝐲𝐫𝐨𝐠𝐫𝐚𝐦</a>
-
-📝 ᴄᴏɴᴛᴀᴄᴛ ᴜs: <a href=https://t.me/CloudxAdmin_Bot>𝐂𝐥𝐨𝐮𝐝𝐱𝐀𝐝𝐦𝐢𝐧</a>
-
+‣ ᴍʏ ɴᴀᴍᴇ: {}
+‣ ʟᴀɴɢᴜᴀɢᴇ: <a href=https://www.python.org>Python3</a>
+‣ ʟɪʙʀᴀʀʏ: <a href=https://docs.pyrogram.org>Pyrogram</a>
+‣ ᴅᴇᴠᴇʟᴏᴘᴇʀ: <a href=https://t.me/Heart_thieft>Heart Thief</a>
+‣ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ: <a href=https://t.me/TGHelpingGroup>Support Group</a>
+‣ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ: <a href=https://t.me/TamizhZone>TamizhZone</a></b></blockquote>
 """
 
     CABOUT_TXT = """<b>ʜɪ ɪ ᴀᴍ ᴘᴇʀᴍᴀɴᴇɴᴛ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ ᴡɪᴛʜ ᴄʟᴏɴᴇ ғᴇᴀᴛᴜʀᴇ + ᴄᴜsᴛᴏᴍ ᴜʀʟ sʜᴏʀᴛɴᴇʀ ɪᴛ ᴍᴇᴀɴs ᴀɴʏ ᴜsᴇʀ ᴄᴀɴ sᴇᴛ ʜɪs ᴜʀʟ sʜᴏʀᴛɴᴇʀ ᴀɴᴅ + ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ.
@@ -99,18 +93,17 @@ First Send /clone command then follow below steps.
 🔻 /broadcast - ʀᴇᴘʟʏ ᴛᴏ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ (ʙᴏᴛ ᴏᴡɴᴇʀ ᴏɴʟʏ)</b>"""
 
 
-    LOG_TEXT = """<b>#NewUser @StoreFilesGetBot
+    LOG_TEXT = """<b>#NewUser For File Store 
     
 ID - <code>{}</code>
 
 Nᴀᴍᴇ - {}</b>
 """
     RESTART_TXT = """
-<b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ ! 
-📢 @StoreFilesGetBot
+<b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
+
 📅 Dᴀᴛᴇ : <code>{}</code>
 ⏰ Tɪᴍᴇ : <code>{}</code>
 🌐 Tɪᴍᴇᴢᴏɴᴇ : <code>Asia/Kolkata</code>
-🛠️ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: <code>v2.7.1 [ Sᴛᴀʙʟᴇ ]</code></b>"""
-
+🛠️ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: <code>v8.8.8 [ Sᴛᴀʙʟᴇ ]</code></b>"""
 
