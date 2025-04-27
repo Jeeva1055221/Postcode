@@ -272,6 +272,7 @@ async def gen_link(log_msg: Message):
     # short    
     return page_link, stream_link
 
+
 async def short_link(user, link):
     if not POST_MODE:
         return link  # If POST_MODE is not enabled, return the original link
@@ -285,13 +286,14 @@ async def short_link(user, link):
         return link
 
     try:
-        # Assuming Shortzy is a custom class to handle URL shortening
+        # Using Shortzy to shorten the link
         shortzy = Shortzy(api_key, base_site)
         short_link = await shortzy.convert(link)
         return short_link
     except Exception as e:
-        print(f"[Shortener Exception] {e}")
-        return link  # Fallback to original link if something goes wrong
+        logger.error(f"[Shortener Exception] {e}")
+        return link  # Fallback to the original link if something goes wrong
+
 
 """async def short_link(link):
     if not POST_MODE:
@@ -306,38 +308,7 @@ async def short_link(user, link):
     shortzy = Shortzy(api_key, base_site)
     short_link = await shortzy.convert(link)
 
-    return short_link
-
-import requests
-
-import aiohttp
-
-async def short_link(user, link):
-    # Check if POST_MODE is enabled
-    if not POST_MODE:
-        return link  # Fallback to the original link if POST_MODE is off
-
-    api_key = user.get("shortener_api")
-    base_site = user.get("base_site")
-
-    if not api_key or not base_site:
-        return link  # Fallback to original link if missing configs
-
-    try:
-        async with aiohttp.ClientSession() as session:
-            async with session.get(f"https://{base_site}/api?api={api_key}&url={link}") as response:
-                response.raise_for_status()  # Will raise error if not 2xx status code
-                data = await response.json()
-
-                if data.get("status") == "success":
-                    return data.get("shortenedUrl", link)  # Fallback to original if key missing
-                else:
-                    print(f"[Shortener Error] Failed for user: {user}, response: {data}")
-                    return link
-
-    except Exception as e:
-        print(f"[Shortener Exception] {e}")
-        return link"""
+    return short_link"""
 
 async def delete_previous_reply(chat_id):
     if chat_id in user_states and "last_reply" in user_states[chat_id]:
