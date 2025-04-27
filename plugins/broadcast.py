@@ -1,3 +1,6 @@
+# For Any doubt contact @HeartThief [REPO OWNER]
+# Paid Repo and bots available @HeartxBotz
+
 from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
 from plugins.dbusers import db
 from pyrogram import Client, filters
