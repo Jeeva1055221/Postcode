@@ -95,8 +95,8 @@ DIRECT_GEN_URL = os.environ.get("DIRECT_GEN_URL", "https://filestoresot.koyeb.ap
 DIRECT_GEN = bool(DIRECT_GEN_DB and DIRECT_GEN_URL)
 
 POST_MODE= bool(environ.get('POST_MODE', True))
-POST_SHORT_API = environ.get('POST_SHORT_API', 'gplinks.com')
-POST_SHORT_URL = environ.get('POST_SHORT_URL', '89c5f49bb30bf45ddae5d35314cc7525a36aceb0')
+POST_SHORT_URL = environ.get('POST_SHORT_URL', 'gplinks.com')
+POST_SHORT_API = environ.get('POST_SHORT_API', '89c5f49bb30bf45ddae5d35314cc7525a36aceb0')
 
 HOW_TO_POST_SHORT = environ.get('HOW_TO_POST_SHORT', 'https://t.me/Howtodowloa/13')
 
