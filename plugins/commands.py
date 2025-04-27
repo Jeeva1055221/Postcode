@@ -1,4 +1,5 @@
-
+# For Any doubt contact @HeartThief [REPO OWNER]
+# Paid Repo and bots available @HeartxBotz
 
 import os
 import logging
