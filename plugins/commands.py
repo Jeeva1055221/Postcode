@@ -15,7 +15,7 @@ from validators import domain
 from Script import script
 from plugins.dbusers import db
 from pyrogram import Client, filters, enums
-from plugins.users_api import get_user, update_user_info
+from plugins.users_api import get_user, update_user_info, get_short_link
 from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import *
 
