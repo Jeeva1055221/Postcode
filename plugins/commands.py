@@ -504,8 +504,8 @@ async def handle_message(client, message):
                 file_info = []
                 for i, file_id in enumerate(user_states[chat_id]["file_ids"]):
                     long_url = f"https://t.me/{temp.U_NAME}?start={file_id}"  # ✅ Use correctly encoded ID
-                 #   short_link_url = await short_link(long_url) or long_url  # ✅ Fallback to long URL
-                    short_link_url = await get_short_link(long_url) or long_url  # ✅ Fallback to long URL
+                    short_link_url = await short_link(long_url) or long_url  # ✅ Fallback to long URL
+                    #short_link_url = await get_short_link(long_url) or long_url  # ✅ Fallback to long URL
                     file_info.append(f"》{user_states[chat_id]['file_sizes'][i]} : {short_link_url}")
             
                 file_info_text = "\n\n".join(file_info)
@@ -514,8 +514,8 @@ async def handle_message(client, message):
                 for i, stream_link in enumerate(user_states[chat_id]["stream_links"]):
                     if isinstance(stream_link, tuple):  # ✅ Fix duplicate link issue
                         stream_link = stream_link[0]  # Pick only one valid URL
-                    #short_stream_link_url = await short_link(stream_link) or stream_link
-                    short_stream_link_url = await get_short_link(stream_link) or stream_link
+                    short_stream_link_url = await short_link(stream_link) or stream_link
+                    #short_stream_link_url = await get_short_link(stream_link) or stream_link
                     stream_links_info.append(f"》{user_states[chat_id]['file_sizes'][i]} : {short_stream_link_url}")
                 
                 stream_links_text = "\n\n".join(stream_links_info)                
