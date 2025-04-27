@@ -64,13 +64,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('💝 sᴜʙsᴄʀɪʙᴇ ᴍʏ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ', url='https://youtube.com/@Tech_VJ')
+            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/TamizhZone')
             ],[
-            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/vj_bot_disscussion'),
-            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/vj_botz')
+            InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/TGHelpingGroup'),
+            InlineKeyboardButton('ᴍᴏᴠɪᴇꜱ ʀᴇQᴜᴇꜱᴛ', url='https://t.me/Movieprovidergroups')
             ],[
-            InlineKeyboardButton('💁‍♀️ ʜᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about')
+            InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
         ]]
         if CLONE_MODE == True:
             buttons.append([InlineKeyboardButton('🤖 ᴄʀᴇᴀᴛᴇ ʏᴏᴜʀ ᴏᴡɴ ᴄʟᴏɴᴇ ʙᴏᴛ', callback_data='clone')])
@@ -520,36 +520,7 @@ async def handle_message(client, message):
                 
                 stream_links_text = "\n\n".join(stream_links_info)                
                # summary_message = f"**🎬{title} Tamil HDRip**\n\n**[ 𝟹𝟼𝟶ᴘ☆𝟺𝟾𝟶ᴘ☆Hᴇᴠᴄ☆𝟽𝟸𝟶ᴘ☆𝟷𝟶𝟾𝟶ᴘ ]✌**\n\n**𓆩🔻𓆪 Dɪʀᴇᴄᴛ Tᴇʟᴇɢʀᴀᴍ Fɪʟᴇs Oɴʟʏ👇**\n\n**{file_info_text}**\n\n**✅ Note : [Hᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ]({HOW_TO_POST_SHORT})👀**\n\n**𓆩🔻𓆪 Sᴛʀᴇᴀᴍ/Fᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ 👇**\n\n**{stream_links_text}**\n\n**✅ Note : [Hᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ]({HOW_TO_POST_SHORT})👀**\n\n**Mᴏᴠɪᴇ Gʀᴏᴜᴘ 𝟸𝟺/𝟽 : @Roxy_Request_24_7**\n\n**❤️‍🔥ー𖤍 𓆩 sʜᴀʀᴇ ᴡɪᴛʜ ғʀɪᴇɴᴅs 𓆪 𖤍ー❤️‍🔥**"
-                summary_message = f"🎬 **{title}**
-
-══════════════════════════════════
-✨ **Available Resolutions:** ✨  
-- **360p** 🌀 | **480p** 🎞 | **Hevc** 💡 | **720p** 🔥 | **1080p** 🌟  
-══════════════════════════════════
-
-👇 **Telegram Direct Files Only:** 👇
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-{file_info_text}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-🔹 **Need Help?** ➡️ [How to Download]( {HOW_TO_POST_SHORT} ) 👀  
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-🚀 **Stream / Fast Download Links:** 🚀  
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-{stream_links_text}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-🔹 **Need Help?** ➡️ [How to Download]( {HOW_TO_POST_SHORT} ) 👀  
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-📲 **Join the Movie Group:**  
-@ChannelLink
-
-🔗 **Share this with Friends:**  
-📢 **Spread the Love & Enjoy the Movie!** ❤️‍🔥
-
-══════════════════════════════════"
+                summary_message = f"🎬 **{title}**\n\n══════════════════════════════════\n✨ **Available Resolutions:** ✨\n- **360p** 🌀 | **480p** 🎞 | **Hevc** 💡 | **720p** 🔥 | **1080p** 🌟\n══════════════════════════════════\n\n👇 **Telegram Direct Files Only:** 👇\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n{file_info_text}\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n🔹 **Need Help?** ➡️ [How to Download]( {HOW_TO_POST_SHORT} ) 👀\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n🚀 **Stream / Fast Download Links:** 🚀\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n{stream_links_text}\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n🔹 **Need Help?** ➡️ [How to Download]( {HOW_TO_POST_SHORT} ) 👀\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n📲 **Join the Movie Group:**\n@Roxy_Request_24_7\n\n🔗 **Share this with Friends:**\n📢 **Spread the Love & Enjoy the Movie!** ❤️‍🔥\n\n══════════════════════════════════"
                 summary_messages = f"{title_clean}, {cleaned_title}"
                 if poster:
                     await message.reply_photo(poster, caption=summary_message)
