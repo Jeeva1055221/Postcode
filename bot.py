@@ -22,14 +22,14 @@ from Script import script
 from datetime import date, datetime 
 import pytz
 from aiohttp import web
-from CloudXbotz.server import web_server
+from HeartxBotz.server import web_server
 from utils import temp #
 
 import asyncio
 from pyrogram import idle
-from CloudXbotz.bot import StreamBot
-from CloudXbotz.utils.keepalive import ping_server
-from CloudXbotz.bot.clients import initialize_clients
+from HeartxBotz.bot import StreamBot
+from HeartxBotz.utils.keepalive import ping_server
+from HeartxBotz.bot.clients import initialize_clients
 
 ppath = "plugins/*.py"
 files = glob.glob(ppath)
@@ -38,7 +38,7 @@ loop = asyncio.get_event_loop()
 
 async def start():
     print('\n')
-    print('Initalizing CloudXbotz Bot')
+    print('Initalizing HeartxBotz Bot')
     bot_info = await StreamBot.get_me()
     StreamBot.username = bot_info.username
     await initialize_clients()
@@ -52,7 +52,7 @@ async def start():
             load = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(load)
             sys.modules["plugins." + plugin_name] = load
-            print("CloudXbotz Imported => " + plugin_name)
+            print("HeartxBotz Imported => " + plugin_name)
     if ON_HEROKU:
         asyncio.create_task(ping_server())
     me = await StreamBot.get_me()
@@ -69,7 +69,7 @@ async def start():
     await web.TCPSite(app, bind_address, PORT).start()
     if CLONE_MODE == True:
         await restart_bots()
-    print("Bot Started Powered By @CloudXbotz")
+    print("Bot Started Powered By @HeartxBotz")
     await idle()
 
 if __name__ == '__main__':
