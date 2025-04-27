@@ -4,7 +4,7 @@ import asyncio
 import logging
 from config import API_HASH, API_ID, MULTI_CLIENT, SLEEP_THRESHOLD
 from pyrogram import Client
-from CloudXbotz.utils.config_parser import TokenParser
+from HeartxBotz.utils.config_parser import TokenParser
 from . import multi_clients, work_loads, StreamBot
 
 
