@@ -6,12 +6,12 @@ import secrets
 import mimetypes
 from aiohttp import web
 from aiohttp.http_exceptions import BadStatusLine
-from CloudXbotz.bot import multi_clients, work_loads, StreamBot
-from CloudXbotz.server.exceptions import FIleNotFound, InvalidHash
-from CloudXbotz import StartTime, __version__
+from HeartxBotz.bot import multi_clients, work_loads, StreamBot
+from HeartxBotz.server.exceptions import FIleNotFound, InvalidHash
+from HeartxBotz import StartTime, __version__
 from ..utils.time_format import get_readable_time
 from ..utils.custom_dl import ByteStreamer
-from CloudXbotz.utils.render_template import render_page
+from HeartxBotz.utils.render_template import render_page
 from config import MULTI_CLIENT
 
 
